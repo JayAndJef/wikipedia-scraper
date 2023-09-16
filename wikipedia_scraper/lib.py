@@ -39,6 +39,9 @@ def get_links(html: str, range: int) -> list[str]:
 
     Returns:
         list[str]: list of links in document
+        
+    Raises:
+        TooFewLinksException
     """
     soup = bs4.BeautifulSoup(html, "html.parser")
 
