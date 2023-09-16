@@ -1,9 +1,9 @@
 import pytest
-from .lib import PageNotFoundException, TooFewLinksException, get_page_html, get_links
+from wikipedia_scraper.lib import PageNotFoundException, TooFewLinksException, get_page_html, get_links
 
 @pytest.fixture
 def page_html():
-    with open("wikipedia_source.html") as file:
+    with open("tests/wikipedia_source.html") as file:
         return file.read()
 
 def test_request():

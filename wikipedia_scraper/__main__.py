@@ -16,7 +16,7 @@ def psychology(url: str, max_length: int = 15):
     flag_reached = False
     print_color = "yellow"
     counter = 0
-    while not flag_reached or counter == max_length:
+    while not flag_reached and counter != max_length:
         try:
             current_url = get_links(get_page_html(current_url), 1)[0]
         except PageNotFoundException:
@@ -32,7 +32,7 @@ def psychology(url: str, max_length: int = 15):
         counter += 1
     
 @app.command()
-def scrape(url: str, range: int = 10):
+def scrape(url: str, url_range: int = 10):
     """
     Scrape a Wikipedia page for its hyperlinks. Ignores the topmost note section and links in parenthetical sentences.
     """
@@ -43,10 +43,10 @@ def scrape(url: str, range: int = 10):
         Exit(1)
         
     try:
-        link_list = get_links(page_html, range)
+        link_list = get_links(page_html, url_range)
     except TooFewLinksException as err:
         print("[red]Too many links requested. Printing every link on page.[/red]")
-        link_list = err.args[0]
+        link_list = err.link_list
         
     print("\n".join(link_list))
 
