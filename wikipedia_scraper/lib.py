@@ -57,6 +57,8 @@ def get_links(html: str, range: int) -> list[str]:
         span.decompose()
     for table in main_content.find_all("table"):
         table.decompose()
+    for figure in main_content.find_all("figure"):
+        figure.decompose()
 
     for section in list(main_content)[0:10]:
         paren_level = 0
@@ -85,6 +87,6 @@ def get_links(html: str, range: int) -> list[str]:
     ]
     
     if len(links) < range - 1:
-        raise TooFewLinksException
+        raise TooFewLinksException(links)
 
     return links[0:range]
