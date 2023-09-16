@@ -7,7 +7,7 @@ Provides multiple functionalities for scraping wikipedia, the centerpoint being 
 
 Use pip:
 ```sh
-pip install wikiscrape
+pip install wikipsy
 ```
 And then run 
 ```sh
