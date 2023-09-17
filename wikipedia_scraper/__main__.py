@@ -8,7 +8,7 @@ from . import app
 @app.command()
 def psychology(url: str, max_length: int = 15):
     """
-    Scrapes the leading hyperlink of Wikipedia pages recursively until the page "Psychology" is reached.
+    Scrapes the leading hyperlink of Wikipedia pages recursively until the page "Psychology" or "Philosophy" is reached.
     """
     current_url = url
     current_url_split = current_url.split("/")
@@ -35,7 +35,7 @@ def psychology(url: str, max_length: int = 15):
 @app.command()
 def graph_multiple(urls: list[str], max_length: int = 15, verbose: bool = False):
     """
-    Given multiple wikipedia pages, scrapes and generated a directed graphviz source file showing the those articles' path to Psychology.
+    Given multiple wikipedia pages, scrapes and generated a directed graphviz source file showing the those articles' path to Psychology/Philosophy.
     For ease of use, direct the output of this command into a graphviz dot file.
     """
     graph = graphviz.Digraph()

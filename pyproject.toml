@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wikipsy"
-version = "1.2.4"
+version = "1.2.5"
 description = "Scrape wikipedia to get to psychology/philosophy"
 readme = "README.md"
 authors = [{ name = "Jayden Qi", email = "jaydeniqv2@gmail.com" }]
