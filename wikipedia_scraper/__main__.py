@@ -24,7 +24,7 @@ def psychology(url: str, max_length: int = 15):
             print("[red]Requested page not found![/red]")
         current_url_split = current_url.split("/")
         
-        if current_url == "https://en.wikipedia.org/wiki/Psychology":
+        if current_url == "https://en.wikipedia.org/wiki/Psychology" or current_url == "https://en.wikipedia.org/wiki/Philosophy":
             flag_reached = True
             print_color = "green"
 
@@ -63,9 +63,9 @@ def graph_multiple(urls: list[str], max_length: int = 15, verbose: bool = False)
             if verbose:
                 print(f"[yellow]{old_url}[/yellow] -> [yellow]{current_url}[/yellow]")
             
-            if current_url == "https://en.wikipedia.org/wiki/Psychology":
+            if current_url == "https://en.wikipedia.org/wiki/Psychology" or current_url == "https://en.wikipedia.org/wiki/Philosophy":
                 if verbose:
-                    print("[green]Source reached Psychology[/green]")
+                    print("[green]Source reached Psychology/Philosophy[/green]")
                 break
             counter += 1
             
