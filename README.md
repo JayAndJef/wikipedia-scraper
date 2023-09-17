@@ -12,9 +12,9 @@ pip install wikipsy
 
 And then run 
 ```
-❯ wikiscrape --help
+❯ wikipsy --help
                                                                                                                                                                                           
- Usage: wikiscraper [OPTIONS] COMMAND [ARGS]...                                                                                                                           
+ Usage: wikipsy [OPTIONS] COMMAND [ARGS]...                                                                                                                           
                                                                                                                                                                                           
 ╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 │ --install-completion          Install completion for the current shell.                                                                                                                │
